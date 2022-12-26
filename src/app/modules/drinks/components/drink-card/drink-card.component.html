@@ -1,0 +1,18 @@
+<mat-card class="drink-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>
+      {{drinkDetails.drinkName}}
+    </mat-card-title>
+  </mat-card-header>
+  <img mat-card-image [src]="drinkDetails.drinkImageSource||drinkDetails.drinkImp" [alt]="drinkDetails.drinkImageAttribution||'Image Not Avl'">
+  <mat-card-content>
+    <p>
+      {{drinkDetails.instructions}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card>

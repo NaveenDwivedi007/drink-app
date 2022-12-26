@@ -1,1 +1,15 @@
-<p>drink-details works!</p>
+<ng-container *ngIf="isAPiCallInProgress;">
+  
+</ng-container>
+<ng-template #apiCallCompleted>
+  <div class="drink-container">
+    <ng-container *ngIf="drinkDetails; else noDrinkDataAvl">
+      
+    </ng-container>
+    <ng-template #noDrinkDataAvl>
+      
+    </ng-template>
+    
+  </div>
+  
+</ng-template>

@@ -11,7 +11,7 @@ export interface AjaxCallArg{
 
 
 export interface DrinkApiRes{
-  drink:Drink[]
+  drinks:Drink[]
 }
 
 export interface Drink {
@@ -66,4 +66,5 @@ export interface Drink {
   strImageAttribution: string;
   strCreativeCommonsConfirmed: string;
   dateModified: string;
+  [key:string]:any
 }
