@@ -9,14 +9,7 @@
     padding: .2em;
     border: 2px solid;
   }
+  .drink-card-component:hover{
+    background-color: rgba(204, 204, 204, 0.808);
+  }
 }
-
-// .drink-card-component::before {
-//   content: '';
-//   position: absolute;
-//   background-color: red;
-//   top: 0;
-//   width: 100%;
-//   height: 100%;
-//   z-index: 1;
-// }
