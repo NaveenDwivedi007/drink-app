@@ -1,15 +1,40 @@
-<ng-container *ngIf="isAPiCallInProgress;">
-  
-</ng-container>
-<ng-template #apiCallCompleted>
+<!-- {{drinkDetails|json}} -->
   <div class="drink-container">
-    <ng-container *ngIf="drinkDetails; else noDrinkDataAvl">
-      
-    </ng-container>
-    <ng-template #noDrinkDataAvl>
-      
-    </ng-template>
+      <div class="banner">
+        <img class="drink-img" [src]="drinkDetails.drinkImp||drinkDetails.drinkImageSource">
+      </div>
+      <div class="details">
+        <div class="des">
+          <h1>
+            {{drinkDetails.drinkName}}
+          </h1>
+          {{drinkDetails.instructions}}
+        </div>
+        <div class="mesu-ing-detail">
+          <span class="list-container">
+            <strong>Ingredient</strong>
+            <ul>
+              <ng-container *ngFor="let ing of drinkDetails.ingredient">
+                <li>
+                  {{ing}}
+                </li>
+              </ng-container>
+              
+            </ul>
+          </span>
+          <span class="list-container">
+            <strong>Measure</strong>
+            <ul>
+              <ng-container *ngFor="let mes of drinkDetails.measure">
+                <li>
+                  {{mes}}
+                </li>
+              </ng-container>
+              
+            </ul>
+          </span>
+        </div>
+      </div>
     
   </div>
   
-</ng-template>

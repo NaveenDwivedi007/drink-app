@@ -1,0 +1,22 @@
+.drink-container{
+  .banner{
+    width: 100vw;
+    .drink-img{
+      height: 20ch;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .details{
+    padding: .3em;
+    .mesu-ing-detail{
+      padding-block: .4em;
+      display: flex;
+      .list-container{
+        width: 100%;
+
+      }
+    }
+  }
+
+}

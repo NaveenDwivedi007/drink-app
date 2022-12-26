@@ -1,6 +1,6 @@
 <div class="drinks-container">
   <ng-container *ngFor="let drink of drinks">
-    <app-drink-card [drinkDetails]="drink" (click)="getDrinkDetails('')" ></app-drink-card>
+    <app-drink-card [drinkDetails]="drink" class="drink-card-component" (click)="getDrinkDetails(drink.id)" ></app-drink-card>
   </ng-container>
   
 </div>

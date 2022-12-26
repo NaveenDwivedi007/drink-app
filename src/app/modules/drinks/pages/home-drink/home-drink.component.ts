@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Subscriber } from 'rxjs';
 import { DrinkUi } from '../../interfaces/drink-ui';
 import { DrinkClientService } from '../../services/drink-client.service';
@@ -13,7 +14,8 @@ export class HomeDrinkComponent implements OnInit,OnDestroy {
   sub = new Subscriber()
   drinks:DrinkUi[] = []
   constructor(
-    private drinkClient:DrinkClientService
+    private drinkClient:DrinkClientService,
+    private router:Router
   ) { }
   ngOnDestroy(): void {
     this.sub.unsubscribe()
@@ -30,8 +32,11 @@ export class HomeDrinkComponent implements OnInit,OnDestroy {
 
 
   getDrinkDetails(searchStr:string){
-    console.log('LLLLLLLLLL');
-    
+    this.router.navigate(['drink'],{
+      queryParams:{
+        searchStr
+      }
+    })
 
   }
 

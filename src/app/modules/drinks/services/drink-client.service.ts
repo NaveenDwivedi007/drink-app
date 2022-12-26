@@ -35,17 +35,17 @@ export class DrinkClientService {
   }
 
   getDrink(searchSrt:string){
-    const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchSrt}`
+    const url = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${searchSrt}`
     return this.ajaxCall<DrinkApiRes>({
       url:url
     }).pipe(
       map(apiRes=>{
-        return apiRes.drinks.map(this.drinkDTO)
+        return (apiRes && apiRes.drinks && apiRes.drinks.map(this.drinkDTO))|| []
       })
     )
   }
 
-  drinkDTO(drink:Drink):DrinkUi{
+  private drinkDTO(drink:Drink):DrinkUi{
     let ingredientRegex = /Ingredient/;
     let measureRegex = /Measure/
     let measureArr = []
