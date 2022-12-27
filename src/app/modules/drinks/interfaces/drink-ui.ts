@@ -6,5 +6,7 @@ export interface DrinkUi{
   drinkImageAttribution:string,
   instructions:string
   ingredient:string[],
-  measure:string[]
+  measure:string[],
+  type:string,
+  category:string
 }

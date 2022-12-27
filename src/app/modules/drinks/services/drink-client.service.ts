@@ -70,7 +70,9 @@ export class DrinkClientService {
       drinkImageAttribution:drink.strImageAttribution,
       ingredient:ingredientArr,
       measure:measureArr,
-      instructions:drink.strInstructions
+      instructions:drink.strInstructions,
+      type:drink.strAlcoholic,
+      category:drink.strCategory
     }
   }
 
